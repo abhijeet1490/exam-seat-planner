@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}Allocate Seats - Exam Seat Planner{% endblock %}
+
+{% block content %}
+<h2>Allocate Seats</h2>
+
+<form action="{{ url_for('allocate') }}" method="post" style="margin-bottom: 20px;">
+    <div style="margin-bottom: 10px;">
+        <label for="totalStudents">Total Students:</label><br>
+        <input type="number" id="totalStudents" name="totalStudents" min="1" value="{{ total_students }}" required>
+    </div>
+    <button type="submit">Allocate</button>
+</form>
+
+{% if error %}
+<p style="color: red; font-weight: bold;">{{ error }}</p>
+{% endif %}
+
+{% if allocated_rooms %}
+<h3>Allocated Rooms</h3>
+<table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse; margin-top: 15px;">
+    <thead>
+        <tr style="background-color: #28a745; color: white;">
+            <th>Room ID</th>
+            <th>Capacity</th>
+            <th>Floor</th>
+            <th>Near Washroom</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for room in allocated_rooms %}
+        <tr>
+            <td>{{ room.roomId }}</td>
+            <td>{{ room.capacity }}</td>
+            <td>{{ room.floorNo }}</td>
+            <td>{{ 'Yes' if room.nearWashroom else 'No' }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endif %}
+
+{% endblock %}
