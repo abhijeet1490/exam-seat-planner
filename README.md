@@ -63,6 +63,5 @@ vercel deploy
 ```
 
 **Live Link**: 
-> [https://classroom-seat-planner-wine.vercel.app/](https://classroom-seat-planner-wine.vercel.app/)
-
+> [https://college-exam-seat-planner-wine.vercel.app/](https://college-exam-seat-planner-wine.vercel.app/)
 ---
