@@ -1,4 +1,4 @@
-# Exam Seat Planner
+# College Exam Seat Planner
 
 A minimal, fast, and feature-rich Exam Seat Planner web application built with Python and Flask. This application helps administrators add classrooms and automatically allocate seats to students based on an optimized logic that prefers lower floors and uses the minimum number of rooms necessary.
 
