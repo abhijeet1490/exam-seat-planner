@@ -67,13 +67,3 @@ vercel deploy
 
 ---
 
-## 📸 Screenshots
-
-> [Insert Home Page Screenshot Here]
-
-> [Insert Add Room Screenshot Here]
-
-> [Insert Allocation Results Screenshot Here]
-
----
-*Built with simplicity and speed in mind.*
